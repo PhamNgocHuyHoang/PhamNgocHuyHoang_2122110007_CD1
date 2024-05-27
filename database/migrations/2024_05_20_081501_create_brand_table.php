@@ -11,7 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('phamngochuyhoang_category', function (Blueprint $table) {
+        Schema::create('phamngochuyhoang_brand', function (Blueprint $table) {
+            $table->id();
             $table->string('name',1000);
             $table->string('slug',1000);
             $table->string('image',1000)->nullable();
@@ -20,7 +21,6 @@ return new class extends Migration
             $table->unsignedInteger('created_by');
             $table->unsignedInteger('updated_by')->nullable();
             $table->unsignedTinyInteger('status')->default(2);
-            $table->timestamps();
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('phamngochuyhoang_category');
+        Schema::dropIfExists('phamngochuyhoang_brand');
     }
 };

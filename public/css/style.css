@@ -9718,14 +9718,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .product-category {
-  
-  
+
+
   background-color: #f2f2f2;
   padding: 20px;
 }
 
 .product-link{
-  
+
     text-decoration: none;
     color: #000000;
 }
@@ -9764,7 +9764,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 .post {
-  
+
   width: auto;
   margin-bottom: 20px;  padding: 20px;
   border: 1px solid #ccc;
@@ -9774,7 +9774,7 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%;
   }
 
- 
+
 p{
   font-family: "Teachers", sans-serif;
 
@@ -9794,17 +9794,56 @@ p{
   margin-top: 0;
 
 
-  
-
-}
-.slider {
-
-  margin-bottom: 20px;
 }
 
-.slider-img {
-
-  width: 100%;
+  .slider {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
+
+.slider-container {
+    display: flex;
+    animation: slide 18s infinite;
+}
+
+
+
+.slider-img-1 {
+    width: 100%;
+}
+
+.slider-img-2 {
+    width: 100%;
+
+}
+
+.slider-img-3 {
+    width: 100%;
+
+}
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-100%);
+    }
+
+    66.66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(-0%);
+    }
+}
+
+
 
 

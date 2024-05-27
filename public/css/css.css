@@ -1,0 +1,53 @@
+.slider {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    animation: slide 18s infinite;
+}
+
+
+
+.slider-img-1 {
+    width: 100%;
+}
+
+.slider-img-2 {
+    width: 100%;
+
+}
+
+.slider-img-3 {
+    width: 100%;
+
+}
+
+
+.slider-img-4 {
+    width: 100%;
+
+}
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-100%);
+    }
+
+    66.66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(-0%);
+    }
+}

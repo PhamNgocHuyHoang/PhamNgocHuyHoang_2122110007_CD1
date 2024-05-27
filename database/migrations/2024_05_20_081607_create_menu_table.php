@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('phamngochuyhoang_category', function (Blueprint $table) {
-            $table->string('name',1000);
-            $table->string('slug',1000);
-            $table->string('image',1000)->nullable();
-            $table->unsignedInteger('sort_order')->default(0);
-            $table->text('description',255)->nullable();
+        Schema::create('phamngochuyhoang_menu', function (Blueprint $table) {
+            $table->id();
+            $table->string('name',255);
+            $table->string('link',255);
+            $table->unsignedInteger('table_id')->nullable();
+            $table->string('type',255);
             $table->unsignedInteger('created_by');
             $table->unsignedInteger('updated_by')->nullable();
             $table->unsignedTinyInteger('status')->default(2);
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('phamngochuyhoang_category');
+        Schema::dropIfExists('phamngochuyhoang_menu');
     }
 };
